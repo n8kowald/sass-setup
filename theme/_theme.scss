@@ -1,0 +1,8 @@
+@import 'colours';
+@import 'typography';
+
+/** Remove hyperlink styling for apple ios */
+a[href^=tel] {
+    text-decoration:inherit;
+    color: inherit;
+}

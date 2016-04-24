@@ -1,0 +1,19 @@
+$z-index: (
+    modal: 100,
+    fixed: 50,
+    nav: 35,
+    controls: 33,
+    badge: 32,
+    header: 30,
+    box-master: 23,
+    box-primary: 22,
+    box-secondary: 21,
+    footer: 20,
+    page: 10
+);
+@function z-index($key) {
+    @return map-get($z-index, $key);
+}
+@mixin z-index($key) {
+    z-index: z-index($key);
+}

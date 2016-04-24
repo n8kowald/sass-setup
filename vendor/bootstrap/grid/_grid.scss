@@ -1,0 +1,177 @@
+@import "_variables";
+@import "_mixin-grid";
+
+//
+// Grid system - Bootstrap 3.2.0 (http://getbootstrap.com/css/#grid)
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed();
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed();
+}
+
+// Fixed widths
+//
+// Fixed widths for page elements
+.fw-xs,
+.fw-sm,
+.fw-md,
+.fw-lg {
+    display: block;
+    @include clearfix;
+    height: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+@media screen and (min-width: $screen-sm-min) {
+    .fw-sm {
+        width: ($screen-sm-min - 78);
+    }
+}
+@media screen and (min-width: $screen-md-min) {
+    .fw-md {
+        width: ($screen-md-min - 30);
+    }
+}
+@media screen and (min-width: $screen-lg-min) {
+    .fw-lg {
+        width: ($screen-lg-min - 60);
+    }
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row();
+}
+
+// Reset the box-sizing
+.row *,
+.row *:before,
+.row *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}
+
+// Bootstrap 3 responsive columns of same height
+// @see: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+
+.col-top {
+    vertical-align: top;
+}
+.col-middle {
+    vertical-align: middle;
+}
+.col-bottom {
+    vertical-align: bottom;
+}
+
+// columns of same height styles
+.row-full-height {
+    height: 100%;
+}
+.col-full-height {
+    height: 100%;
+}
+.row-same-height {
+    display: table;
+    width: 100%;
+    // fix overflow
+    table-layout: fixed;
+}
+.col-height {
+    display: table-cell;
+    float: none !important;
+}
+
+.col-xs-height {
+  display: table-cell;
+  float: none !important;
+}
+
+@media (min-width: 768px) {
+  .col-sm-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-height {
+    display: table-cell;
+    float: none !important;
+  }
+}

@@ -1,0 +1,53 @@
+/* --- Inclusives --- */
+
+// Convention: .$behaviour-$deviceSize
+// Inclusive classes start with a name describing their behaviour, then device size.
+
+// Inclusives are applied to the given device width and greater
+// because inclusives are created using min-widths.
+
+.hidden-xs,
+.is-hidden {
+    display: none;
+}
+.display-block-xs {
+    display: block;
+}
+.display-inline-xs {
+    display: inline;
+}
+
+// Screen
+@media screen and (min-width: $screen-sm-min) {
+    .display-inline-sm {
+        display: inline;
+    }
+    .display-block-sm {
+        display: block;
+    }
+    .hidden-sm {
+        display: none;
+    }
+}
+@media screen and (min-width: $screen-md-min) {
+    .display-inline-md {
+        display: inline;
+    }
+    .display-block-md {
+        display: block;
+    }
+    .hidden-md {
+        display: none;
+    }
+}
+@media screen and (min-width: $screen-lg-min) {
+    .display-inline-lg {
+        display: inline;
+    }
+    .display-block-lg {
+        display: block;
+    }
+    .hidden-lg {
+        display: none;
+    }
+}

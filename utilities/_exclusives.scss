@@ -1,0 +1,60 @@
+/* --- Exclusives --- */
+
+// Convention: .no-$name-$deviceSize
+
+// Exclusive classes start with 'no-', followed by a name
+// describing what is being disabled, then device size.
+
+// Exclusives are applied to the given device size only.
+
+// Remove column padding
+@mixin no-gutter {
+    [class*="col-"] {
+        padding: 0;
+    }
+}
+.no-gutter {
+    @include no-gutter();
+}
+.no-text-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+@media screen and (max-width: $screen-xs-max) {
+    .no-show-xs {
+        display: none;
+    }
+    .no-gutter-xs {
+        @include no-gutter();
+    }
+    .no-position-relative-xs {
+        position: inherit;
+    }
+}
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .no-show-sm {
+        display: none;
+    }
+    .no-gutter-sm {
+        @include no-gutter();
+    }
+}
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .no-show-md {
+        display: none;
+    }
+    .no-gutter-md {
+        @include no-gutter();
+    }
+}
+@media screen and (min-width: $screen-lg-min) {
+    .no-show-lg {
+        display: none;
+    }
+    .no-gutter-lg {
+        @include no-gutter();
+    }
+}

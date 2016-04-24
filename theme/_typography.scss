@@ -1,0 +1,60 @@
+$font-path: '/static/fonts/';
+
+// Fonts
+@font-face {
+    font-family: 'GibsonLight';
+    src: url($font-path + 'gibson-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url($font-path + 'gibson-light-webfont.woff') format('woff'),
+         url($font-path + 'gibson-light-webfont.ttf') format('truetype'),
+         url($font-path + 'gibson-light-webfont.svg') format('svg');
+}
+@font-face {
+    font-family: 'Gibson';
+    src: url($font-path + 'gibson-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url($font-path + 'gibson-regular-webfont.woff') format('woff'),
+         url($font-path + 'gibson-regular-webfont.ttf') format('truetype'),
+         url($font-path + 'gibson-regular-webfont.svg') format('svg');
+}
+@font-face {
+    font-family: 'GibsonSemiBold';
+    src: url($font-path + 'gibson-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url($font-path + 'gibson-semibold-webfont.woff') format('woff'),
+         url($font-path + 'gibson-semibold-webfont.ttf') format('truetype'),
+         url($font-path + 'gibson-semibold-webfont.svg') format('svg');
+}
+$gibson-light: 'GibsonLight', Arial;
+$gibson: 'Gibson', Arial;
+$gibson-semi-bold: 'GibsonSemiBold', Arial;
+
+/* --- Base font size --- */
+
+// Set base font size for the HTML element so we can use rems (root em).
+// rems are relative to the HTML element's font-size so they're easier to use
+// than ems which are relative to the parent element's font-size.
+
+// (62.5% of the default 16px) changes the base html font size to be 10px.
+// Allows easy px to rem conversion, as 1rem = 10px. 1.4rem = 14px.
+
+// Base = 10px
+$font-size-html: 62.5%;
+
+html {
+    font: normal $font-size-html $gibson;
+}
+
+// Line height is unitless (height based on font-size)
+$line-height-base: 1.2;
+body {
+    // Our base font size is 16px
+    @include font-size($font-size-base);
+    line-height: $line-height-base;
+}
+.font-weight-light {
+    @include webfont($gibson-light);
+}
+.font-weight-regular {
+    @include webfont($gibson);
+}
+.font-weight-bold {
+    @include webfont($gibson-semi-bold);
+}

@@ -1,0 +1,124 @@
+// Supported paddings
+$paddings: 0, 5, 10, 15, 20, 25, 30;
+
+/**
+ * INCLUSIVES
+ * Device size and greater
+ **/
+
+// Mobile
+@each $padding in $paddings {
+    .padding-#{$padding}-xs {
+        padding: #{$padding}px;
+    }
+    .padding-top-#{$padding}-xs {
+        padding-top: #{$padding}px;
+    }
+    .padding-right-#{$padding}-xs {
+        padding-right: #{$padding}px;
+    }
+    .padding-bottom-#{$padding}-xs {
+        padding-bottom: #{$padding}px;
+    }
+    .padding-left-#{$padding}-xs {
+        padding-left: #{$padding}px;
+    }
+}
+// Tablet
+@media screen and (min-width: $screen-sm-min) {
+    @each $padding in $paddings {
+        .padding-#{$padding}-sm {
+            padding: #{$padding}px;
+        }
+        .padding-top-#{$padding}-sm {
+            padding-top: #{$padding}px;
+        }
+        .padding-right-#{$padding}-sm {
+            padding-right: #{$padding}px;
+        }
+        .padding-bottom-#{$padding}-sm {
+            padding-bottom: #{$padding}px;
+        }
+        .padding-left-#{$padding}-sm {
+            padding-left: #{$padding}px;
+        }
+    }
+}
+// Desktop - Medium
+@media screen and (min-width: $screen-md-min) {
+    @each $padding in $paddings {
+        .padding-#{$padding}-md {
+            padding: #{$padding}px;
+        }
+        .padding-top-#{$padding}-md {
+            padding-top: #{$padding}px;
+        }
+        .padding-right-#{$padding}-md {
+            padding-right: #{$padding}px;
+        }
+        .padding-bottom-#{$padding}-md {
+            padding-bottom: #{$padding}px;
+        }
+        .padding-left-#{$padding}-md {
+            padding-left: #{$padding}px;
+        }
+    }
+    .padding-bottom-104-md {
+        padding-bottom: 104px;
+    }
+    .padding-bottom-125-md {
+        padding-bottom: 125px;
+    }
+}
+// Desktop - Large
+@media screen and (min-width: $screen-lg-min) {
+    .padding-bottom-10-lg {
+        padding-bottom: 10px;
+    }
+}
+
+/**
+ * EXCLUSIVES
+ * Device size only
+ **/
+
+// Mobile
+@media screen and (max-width: $screen-xs-max) {
+    @each $padding in $paddings {
+        .padding-#{$padding}-only-xs {
+            padding: #{$padding}px;
+        }
+        .padding-top-#{$padding}-only-xs {
+            padding-top: #{$padding}px;
+        }
+        .padding-right-#{$padding}-only-xs {
+            padding-right: #{$padding}px;
+        }
+        .padding-bottom-#{$padding}-only-xs {
+            padding-bottom: #{$padding}px;
+        }
+        .padding-left-#{$padding}-only-xs {
+            padding-left: #{$padding}px;
+        }
+    }
+}
+// Tablet
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @each $padding in $paddings {
+        .padding-#{$padding}-only-sm {
+            padding: #{$padding}px;
+        }
+        .padding-top-#{$padding}-only-sm {
+            padding-top: #{$padding}px;
+        }
+        .padding-right-#{$padding}-only-sm {
+            padding-right: #{$padding}px;
+        }
+        .padding-bottom-#{$padding}-only-sm {
+            padding-bottom: #{$padding}px;
+        }
+        .padding-left-#{$padding}-only-sm {
+            padding-left: #{$padding}px;
+        }
+    }
+}

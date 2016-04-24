@@ -1,0 +1,36 @@
+.br-xs {
+    display: block;
+}
+@media screen and (max-width: $screen-xs-max) {
+    .br-only-xs {
+        display: block;
+    }
+}
+@media screen and (min-width: $screen-sm-min) {
+    .br-sm {
+        display: block;
+    }
+}
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .br-only-sm {
+        display: block;
+    }
+}
+@media screen and (min-width: $screen-md-min) {
+    .br-md {
+        display: block;
+    }
+}
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .br-only-md {
+        display: block;
+    }
+}
+@media screen and (min-width: $screen-lg-min) {
+    .br-lg {
+        display: block;
+    }
+    .br-only-lg {
+        display: block;
+    }
+}

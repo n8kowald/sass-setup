@@ -1,0 +1,118 @@
+// Utility classes
+// -----------------------------------------------
+// Imported last, so their specificity is greater
+// than styles defined at a module or page level.
+
+@import 'background-colour';
+@import 'borders';
+@import 'inclusives';
+@import 'exclusives';
+@import 'text-colour';
+@import 'text-size';
+@import 'line-breaks';
+@import 'line-height';
+@import 'margin';
+@import 'padding';
+@import 'text-align';
+@import 'print';
+
+// Other
+.box-sizing-reset * {
+    box-sizing: content-box;
+}
+.background-size-cover {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    display: block;
+}
+.no-border {
+    border: 0;
+}
+.no-border-radius {
+    @include border-radius(0);
+}
+.no-text-shadow {
+    text-shadow: none;
+}
+.clearfix {
+    @include clearfix();
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.display-block {
+    display: block;
+}
+.display-inline {
+    display: inline;
+}
+.display-inline-block {
+    @include inline-block();
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.float-none {
+    float: none;
+}
+.gpu-accelerate {
+    @include gpu-accelerate();
+}
+.gutter-reset {
+    [class*="col-"] {
+        padding-left: ($grid-gutter-width / 2);
+        padding-right: ($grid-gutter-width / 2);
+    }
+}
+.position-relative {
+    position: relative;
+}
+.position-fixed {
+    position: fixed;
+}
+.white-space-nowrap {
+    white-space: nowrap;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+// Parent element should have matching
+// height and line-height
+// e.g.: height: 150px; line-height: 150px;
+.vertical-align-bottom {
+    vertical-align: bottom;
+}
+.vertical-align-text-top {
+    vertical-align: text-top;    
+}
+.vertical-align-middle {
+    @include inline-block();
+    vertical-align: middle;
+    line-height: 1em;
+}
+.overflow-scroll {
+    overflow: scroll;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.full-height {
+   height: 100vh;
+}
+.full-min-height {
+    min-height: 100vh;
+}
+.full-width {
+    width: 100%;
+}
+.half-width {
+    width: 50%;
+}
+.box-shadow {
+    @include box-shadow(0px, 2px, 1px, 0);
+}

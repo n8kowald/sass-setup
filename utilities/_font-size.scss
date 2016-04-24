@@ -1,0 +1,60 @@
+// Supported font-sizes
+$font-sizes: 16, 18, 20, 22, 24, 26, 28, 30;
+
+/**
+ * INCLUSIVES
+ * Device size and greater
+ **/
+
+// Mobile
+@each $size in $font-sizes {
+    .font-size-#{$size}-xs {
+        @include font-size($size / 10);
+    }
+}
+// Tablet
+@media screen and (min-width: $screen-sm-min) {
+    @each $size in $font-sizes {
+        .font-size-#{$size}-sm {
+            @include font-size($size / 10);
+        }
+    }
+}
+// Desktop - Medium
+@media screen and (min-width: $screen-md-min) {
+    @each $size in $font-sizes {
+        .font-size-#{$size}-md {
+            @include font-size($size / 10);
+        }
+    }
+}
+
+/**
+ * EXCLUSIVES
+ * Device size only
+ **/
+
+// Mobile
+@media screen and (max-width: $screen-xs-max) {
+    @each $size in $font-sizes {
+        .font-size-#{$size}-only-xs {
+            @include font-size($size / 10);
+        }
+    }
+}
+// Tablet
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @each $size in $font-sizes {
+        .font-size-#{$size}-only-sm {
+            @include font-size($size / 10);
+        }
+    }
+}
+// Desktop - medium
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    @each $size in $font-sizes {
+        .font-size-#{$size}-only-md {
+            @include font-size($size / 10);
+        }
+    }
+}

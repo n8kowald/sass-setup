@@ -1,0 +1,60 @@
+// Supported alignments
+$alignments: left, center, right;
+
+/**
+ * INCLUSIVES
+ * Device size and greater
+ **/
+
+// Mobile
+@each $alignment in $alignments {
+    .text-align-#{$alignment}-xs {
+        text-align: #{$alignment};
+    }
+}
+// Tablet
+@media screen and (min-width: $screen-sm-min) {
+    @each $alignment in $alignments {
+        .text-align-#{$alignment}-sm {
+            text-align: #{$alignment};
+        }
+    }
+}
+// Desktop
+@media screen and (min-width: $screen-md-min) {
+    @each $alignment in $alignments {
+        .text-align-#{$alignment}-md {
+            text-align: #{$alignment};
+        }
+    }
+}
+
+/**
+ * EXCLUSIVES
+ * Device size only
+ **/
+
+// Mobile
+@media screen and (max-width: $screen-xs-max) {
+    @each $alignment in $alignments {
+        .text-align-#{$alignment}-only-xs {
+            text-align: #{$alignment};
+        }
+    }
+}
+// Tablet
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @each $alignment in $alignments {
+        .text-align-#{$alignment}-only-sm {
+            text-align: #{$alignment};
+        }
+    }
+}
+// Desktop
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    @each $alignment in $alignments {
+        .text-align-#{$alignment}-only-md {
+            text-align: #{$alignment};
+        }
+    }
+}

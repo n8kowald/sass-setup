@@ -1,0 +1,18 @@
+/* --- Breakpoints --- */
+
+// Mobile: 0 -> 599px
+$screen-xs-min: 0;
+
+// Tablet: 600px -> 1007px
+$screen-sm-min: 600px;
+
+// Desktop: 1008px and -> 1279px
+$screen-md-min: 1008px;
+
+// Large screen / wide desktop
+$screen-lg-min: 1280px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);

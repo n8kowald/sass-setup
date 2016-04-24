@@ -1,0 +1,132 @@
+// Supported margins
+$margins: 0, 5, 10, 15, 20, 25, 30, 35, 50;
+
+/**
+ * INCLUSIVES
+ * Device size and greater
+ * **/
+
+// Mobile
+@each $margin in $margins {
+    .margin-#{$margin}-xs {
+        margin: #{$margin}px;
+    }
+    .margin-top-#{$margin}-xs {
+        margin-top: #{$margin}px;
+    }
+    .margin-right-#{$margin}-xs {
+        margin-right: #{$margin}px;
+    }
+    .margin-bottom-#{$margin}-xs {
+        margin-bottom: #{$margin}px;
+    }
+    .margin-left-#{$margin}-xs {
+        margin-left: #{$margin}px;
+    }
+}
+// Tablet
+@media screen and (min-width: $screen-sm-min) {
+    @each $margin in $margins {
+        .margin-#{$margin}-sm {
+            margin: #{$margin}px;
+        }
+        .margin-top-#{$margin}-sm {
+            margin-top: #{$margin}px;
+        }
+        .margin-right-#{$margin}-sm {
+            margin-right: #{$margin}px;
+        }
+        .margin-bottom-#{$margin}-sm {
+            margin-bottom: #{$margin}px;
+        }
+        .margin-left-#{$margin}-sm {
+            margin-left: #{$margin}px;
+        }
+    }
+}
+// Desktop - Medium
+@media screen and (min-width: $screen-md-min) {
+    @each $margin in $margins {
+        .margin-#{$margin}-md {
+            margin: #{$margin}px;
+        }
+        .margin-top-#{$margin}-md {
+            margin-top: #{$margin}px;
+        }
+        .margin-right-#{$margin}-md {
+            margin-right: #{$margin}px;
+        }
+        .margin-bottom-#{$margin}-md {
+            margin-bottom: #{$margin}px;
+        }
+        .margin-left-#{$margin}-md {
+            margin-left: #{$margin}px;
+        }
+    }
+}
+
+/**
+ * EXCLUSIVES
+ * Device size only
+ * **/
+
+// Mobile
+@media screen and (max-width: $screen-xs-max) {
+    @each $margin in $margins {
+        .margin-#{$margin}-only-xs {
+            margin: #{$margin}px;
+        }
+        .margin-top-#{$margin}-only-xs {
+            margin-top: #{$margin}px;
+        }
+        .margin-right-#{$margin}-only-xs {
+            margin-right: #{$margin}px;
+        }
+        .margin-bottom-#{$margin}-only-xs {
+            margin-bottom: #{$margin}px;
+        }
+        .margin-left-#{$margin}-only-xs {
+            margin-left: #{$margin}px;
+        }
+    }
+}
+// Tablet
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @each $margin in $margins {
+        .margin-#{$margin}-only-sm {
+            margin: #{$margin}px;
+        }
+        .margin-top-#{$margin}-only-sm {
+            margin-top: #{$margin}px;
+        }
+        .margin-right-#{$margin}-only-sm {
+            margin-right: #{$margin}px;
+        }
+        .margin-bottom-#{$margin}-only-sm {
+            margin-bottom: #{$margin}px;
+        }
+        .margin-left-#{$margin}-only-sm {
+            margin-left: #{$margin}px;
+        }
+    }
+}
+// Desktop - medium
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    @each $margin in $margins {
+        .margin-#{$margin}-only-md {
+            margin: #{$margin}px;
+        }
+        .margin-top-#{$margin}-only-md {
+            margin-top: #{$margin}px;
+        }
+        .margin-right-#{$margin}-only-md {
+            margin-right: #{$margin}px;
+        }
+        .margin-bottom-#{$margin}-only-md {
+            margin-bottom: #{$margin}px;
+        }
+        .margin-left-#{$margin}-only-md {
+            margin-left: #{$margin}px;
+        }
+    }
+}
