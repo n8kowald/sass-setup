@@ -44,6 +44,8 @@ html {
 
 // Line height is unitless (height based on font-size)
 $line-height-base: 1.2;
+$font-size-base: 16px;
+
 body {
     // Our base font size is 16px
     @include font-size($font-size-base);
